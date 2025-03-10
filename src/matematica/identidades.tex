@@ -102,3 +102,26 @@ For numbers until $10^{18}$ the largest gap is 1500.\\[0.5cm]
 
 999999937 $\quad$ 1000000007 $\quad$ 1000000009 $\quad$ 1000000021 $\quad$ 1000000033
 $10^{18} - 11 \quad\quad 10^{18} + 3 \quad\quad\quad 2305843009213693951 = 2^{61} - 1$
+
+\subsection{Fermat's Theorems}
+Let P be a prime number and $a$ an integer, then:
+$$a^p \equiv a \quad (\text{mod } p)$$
+$$a^{p-1} \equiv 1 \quad (\text{mod } p)$$
+
+\textbf{Lemma:} Let $p$ be a prime number and $a$ and $b$ integers, then: 
+$$(a+b)^{p} \equiv a^{p} + b^{p} \quad (\text{mod } p)$$
+
+\textbf{Lemma:} Let $p$ be a prime number and $a$ an integer. The inverse of $a$ modulo $p$ is $a^{p-2}$:
+
+$$a^{-1} \equiv a^{p-2} \quad (\text{mod } p)$$
+
+\subsection{Taking modulo at the exponent}
+
+If $a$ and $m$ are coprime, then
+
+$$ a^n \equiv a^{n \text{ mod } \varphi(m)} \quad (\text{mod } m) $$
+
+Generally, if $n \geq \log_2 m$, then
+
+$$ a^n \equiv a^{\varphi(m) + [n \text{ mod } \varphi(m)]} \quad (\text{mod } m) $$
+
