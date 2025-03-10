@@ -6,6 +6,8 @@ using llu = unsigned long long;
 using lld = long long;
 using Lf = long double;
 
+#define all(n) begin(n), end(n)
+
 #ifdef LOCAL
 #define debug(ARG) cout << "[" << #ARG << "]: " << ARG << endl
 #else
