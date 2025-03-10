@@ -1,33 +1,40 @@
 //kactl
+#include <bits/stdc++.h>
+
+using namespace std;
 using lld = long long;
 
 #define vec vector
 #define vi vec<lld>
+#define sz(x) (int)(x).size()
+#define pb push_back
+#define rep(i, a, b) for (int i = (a); i < (b); ++i)
 
 struct PushRelabel {
 	struct Edge {
 		int dest, back;
-		ll f, c;
+		lld f, c;
+		Edge(int d, int b, lld flow, lld cap) : dest(d), back(b), f(flow), c(cap) {}
 	};
-	vector<vector<Edge>> g;
-	vector<ll> ec;
-	vector<Edge*> cur;
-	vector<vi> hs; vi H;
+	vec<vec<Edge>> g;
+	vec<lld> ec;
+	vec<Edge*> cur;
+	vec<vi> hs; vi H;
 	PushRelabel(int n) : g(n), ec(n), cur(n), hs(2*n), H(n) {}
 
-	void addEdge(int s, int t, ll cap, ll rcap=0) {
+	void addEdge(int s, int t, lld cap, lld rcap=0) {
 		if (s == t) return;
-		g[s].push_back({t, sz(g[t]), 0, cap});
-		g[t].push_back({s, sz(g[s])-1, 0, rcap});
+		g[s].pb({t, sz(g[t]), 0, cap});
+		g[t].pb({s, sz(g[s])-1, 0, rcap});
 	}
 
-	void addFlow(Edge& e, ll f) {
+	void addFlow(Edge& e, lld f) {
 		Edge &back = g[e.dest][e.back];
-		if (!ec[e.dest] && f) hs[H[e.dest]].push_back(e.dest);
+		if (!ec[e.dest] && f) hs[H[e.dest]].pb(e.dest);
 		e.f += f; e.c -= f; ec[e.dest] += f;
 		back.f -= f; back.c += f; ec[back.dest] -= f;
 	}
-	ll calc(int s, int t) {
+	lld calc(int s, int t) {
 		int v = sz(g); H[s] = v; ec[t] = 1;
 		vi co(2*v); co[0] = v-1;
 		rep(i,0,v) cur[i] = g[i].data();
