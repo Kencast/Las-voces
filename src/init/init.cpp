@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+
 using llu = unsigned long long;
 using lld = long long;
 using Lf = long double;
@@ -11,13 +13,11 @@ using Lf = long double;
 #endif
 
 void solv() {}
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int t = 1;
-    cin >> t;
-    while (t--)
-        solv();
-    return 0;
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int t = 1;//cin >> t;
+	while (t--) solv();
+	return 0;
 }
