@@ -1,0 +1,161 @@
+%"The PDF file may contain up to 25 pages of reference material, single-sided, letter or A4 size, with text and illustrations readable by a person with correctable eyesight without magnification from a distance of 1/2 meter."
+\input{preamble.tex}
+\begin{document}
+
+\def\title{Universidad Nacional de Rosario - Don Gato}
+\textcolor{white}{.}\\[0.2cm]
+\centering{\LARGE\textbf{Don Gato}} \\[0.5cm]
+\centering{\includegraphics[width=5.5cm]{img/pandilla.png}}
+\tableofcontents\newpage
+
+\section{Estructuras}
+%\subsection{TEST sobre el largo de las líneas}
+%\cppfile{}{test.cpp}
+\subsection{Segment tree}
+\cppfile{}{src/estructuras/segtree.cpp}
+%\subsection{TEST sobre el largo de las líneas}
+%\cppfile{}{test.cpp}
+\subsection{Segment tree lazy}
+\cppfile{}{src/estructuras/segtree_lazy.cpp}
+\subsection{Segment tree persistente}
+\cppfile{}{src/estructuras/segtree_persistente.cpp}
+\subsection{Binary lifting + LCA}
+\cppfile{}{src/estructuras/binlift_lca.cpp}
+\subsection{Fenwick tree}
+\cppfile{}{src/estructuras/fenwick_tree.cpp}
+\subsection{HLD Heavy Light Decomposition}
+\cppfile{}{src/estructuras/hld.cpp}
+\subsection{Indexed set}
+\cppfile{}{src/estructuras/indexed_set.cpp}
+\subsection{Rollback}
+\cppfile{}{src/estructuras/rollback.cpp}
+\subsection{Chull trick}
+\cppfile{}{src/estructuras/chull_trick.cpp}
+\subsection{Chull trick dinamico}
+\cppfile{}{src/estructuras/chull_trick_dynamic.cpp}
+\subsection{Treap}
+\cppfile{}{src/estructuras/treap.cpp}
+\subsection{Sparse table}
+\cppfile{}{src/estructuras/sparse_table.cpp}
+
+\section{Flujo}
+\subsection{Dinic}
+\cppfile{}{src/flujo/dinic.cpp}
+\subsection{Hopcroft}
+\cppfile{}{src/flujo/hopcroft.cpp}
+\subsection{Hungarian}
+\cppfile{}{src/flujo/hungarian.cpp}
+\subsection{min cost MAX FLOW}
+\cppfile{}{src/flujo/min_cost_max_flow.cpp}
+
+\section{Geometría}
+\subsection{Utils}
+\cppfile{}{src/geometry/utils.cpp}
+\subsection{Intersección de semiplanos}
+\cppfile{}{src/geometry/semiplanos.cpp}
+
+\section{Grafos}
+\subsection{Articulation - Bridges}
+\cppfile{}{src/grafos/articulation_bridges.cpp}
+\subsection{Dijkstra}
+\cppfile{}{src/grafos/dijkstra.cpp}
+\subsection{Flody-Warshall}
+\cppfile{}{src/grafos/floyd.cpp}
+\subsection{Tarjan}
+\cppfile{}{src/grafos/tarjan.cpp}
+\subsection{Centroid}
+\cppfile{}{src/grafos/centroid.cpp}
+\subsection{Blossom}
+\cppfile{}{src/grafos/blossom.cpp}
+\subsection{Union Find}
+\cppfile{}{src/grafos/union_find.cpp}
+
+\section{Math}
+\subsection{Teorema Chino del Resto + Euclides + Diofánticas}
+\cppfile{}{src/math/crt.cpp}
+\subsection{Divisores}
+\cppfile{}{src/math/divisors.cpp}
+\subsection{Factorizaciones}
+\cppfile{}{src/math/fact.cpp}
+\subsection{Fastmod}
+\cppfile{}{src/math/fastmod.cpp}
+\subsection{Gauss}
+\cppfile{}{src/math/gauss.cpp}
+\subsection{Inversos modulares}
+\cppfile{}{src/math/inversemod.cpp}
+\subsection{Lucas}
+\cppfile{}{src/math/lucas.cpp}
+\subsection{Multiplicación de matrices}
+\cppfile{}{src/math/matmul.cpp}
+\subsection{Phi + Orden mod m}
+\cppfile{}{src/math/phi_orden.cpp}
+\subsection{Pollard's Rho}
+\cppfile{}{src/math/rho.cpp}
+\subsection{FFT}
+\cppfile{}{src/math/fft.cpp}
+\subsection{Hadamard}
+\cppfile{}{src/math/fht.cpp}
+\subsection{Polinomios + Interpolacion}
+\cppfile{}{src/math/polinomios.cpp}
+\subsection{Berlekamp - Massey}
+\cppfile{}{src/math/berlekamp.cpp}
+\subsection{Recurrencias lineales}
+\cppfile{}{src/math/linear_rec.cpp}
+\subsection{Karatsuba}
+\cppfile{}{src/math/karatsuba.cpp}
+\subsection{Teoremas y listas}
+\cppfile{}{src/math/teoremas_formulas_listas.txt}
+\subsection{Identidades}
+\begin{align*}
+	C_n &= \frac{2(2n-1)}{n+1} C_{n-1} \\
+	F_{2n+1} &= F_{n}^2 + F_{n+1}^2 \\
+	F_{2n} &= F_{n+1}^2 - F_{n-1}^2 \\
+	\sum_{i=1}^n F_i &= F_{n+2}-1 \\
+	F_{n+i}F_{n+j} - F_nF_{n+i+j} &= (-1)^n F_iF_j \\
+	\sum_{i=0}^n i^2 &= \frac{n(n+1)(2n+1)}{6} \\
+	\sum_{i=0}^n i^3 &= \frac{n^2(n+1)^2}{4} \\
+	\sum_{i=0}^n i \binom n i &= 2^{n - 1}n \\
+	\sum_{i=0}^n i^2 \binom n i &= 2^{n - 2}n(n+1) \\
+	\sum_{i=0}^n i^3 \binom n i &= 2^{n - 3}n^2(n+3) \\
+\end{align*}
+
+\section{Optimization}
+\subsection{Simplex}
+\cppfile{}{src/optimization/simplex.hpp}
+\subsection{Simulated Annealing}
+\cppfile{}{src/optimization/simulated_annealing.hpp}
+\subsection{Ternary Search}
+\cppfile{}{src/optimization/ternary_search.hpp}
+
+\section{Strings}
+\subsection{Aho-Corasick}
+\cppfile{}{src/strings/aho_corasick.hpp}
+\subsection{Hashing}
+\cppfile{}{src/strings/hashing.cpp}
+\subsection{KMP}
+\cppfile{}{src/strings/kmp.hpp}
+\subsection{Lyndon Factorization}
+\cppfile{}{src/strings/lyndon.hpp}
+\subsection{Manacher}
+\cppfile{}{src/strings/manacher.hpp}
+\subsection{String functions}
+\cppfile{}{src/strings/string_functions.hpp}
+\subsection{Suffix Automaton}
+\cppfile{}{src/strings/suffix_automaton.hpp}
+\subsection{Suffix array}
+\cppfile{}{src/strings/suffix_array.hpp}
+
+\section{Otros}
+\subsection{Mo}
+\cppfile{}{src/otros/mo.cpp}
+\subsection{Simpson}
+\cppfile{}{src/otros/simpson.hpp}
+
+\section{Init}
+\subsection{Makefile}
+\cppfile{}{Makefile}
+\subsection{Template}
+\cppfile{}{src/template.cpp}
+
+\end{document}
+
