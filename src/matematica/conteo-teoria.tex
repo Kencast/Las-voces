@@ -1,0 +1,64 @@
+\section{Combinatoria}
+
+% Fuente: Kactl theorical
+\subsection{Stirling numbers of the first kind} These are the number of permutations of $[n]$ with exactly $k$ disjoint cycles. They obey the recurrence:
+
+  \begin{equation*}
+    \stirlingfirst{n}{k} = (n-1)\stirlingfirst{n-1}{k} + \stirlingfirst{n-1}{k-1},
+  \end{equation*}
+  
+  \begin{equation*}
+    \stirlingfirst{0}{0} = 1, \stirlingfirst{n}{0} = \stirlingfirst{0}{n} = 0
+  \end{equation*}
+  
+\begin{itemize}
+    \item The sum products of the $\binom{n}{k}$ subsets of size $k$ of $\{0, 1, \dots, n-1\}$ is $\stirlingfirst{n}{n-k}$.
+    
+    \item $\sum_{k=0}^n \stirlingfirst{n}{k} = n!$
+
+    \item $\sum_{k=0}^{n}\stirlingfirst{n}{k}x^k = x(x-1)(x-2)...(x-n+1)$
+\end{itemize}
+
+
+\subsection{Stirling numbers of the second kind} These are the number of ways 
+to partition $[n]$ into exactly $k$ non-empty sets. They obey the recurrence:
+  \begin{equation*}
+    \stirlingsecond{n}{k} = k\stirlingsecond{n-1}{k} + \stirlingsecond{n-1}{k-1}
+  \end{equation*}
+  
+  \begin{equation*}
+    \stirlingsecond{0}{0} = 1, \stirlingsecond{n}{0} = \stirlingsecond{0}{n} = 0
+  \end{equation*}
+
+  A ``closed'' formula for it is:
+  \begin{equation*}
+    \stirlingsecond{n}{k} = \frac{1}{k!}\sum_{j=0}^k (-1)^{k-j} \binom{k}{j} j^n
+  \end{equation*}
+
+
+\subsection{Derangement} A derangement is a permutation that has no fixed points. 
+Let $d_n$ be the number of ways of derangement of a sequence of the sequence $1\dots n$. 
+We have the recurrence $d_n=(n-1)(d_{n-1}+d_{n-2})$. Moreover, $d_n$ is the closest integer to $\frac{n!}{e}$.
+
+$$d_n = n!\sum_{i=0}^{n}\frac{(-1)^i}{i!}$$
+
+
+\subsection{Bell numbers} These count the number of ways to partition $[n]$ into subsets. 
+They obey the recurrence:
+
+\begin{equation*}
+    \mathcal{B}_{n+1} = \sum_{k=0}^n \binom{n}{k} \mathcal{B}_k
+\end{equation*}
+
+
+\subsection{Eulerian numbers} 
+The Eulerian number $T(n,k)$ is the number of permutations of the numbers from $1$ to $n$ in which exactly $k$ elements are greater than the previous element (permutations with $k$ ``ascents'').
+
+%http://oeis.org/A179457
+
+$$ T(n,k) = \sum_{j = 0}^k (-1)^j (k-j)^{(n+1)} \binom{n+1}{j}$$
+
+
+\subsection{Catalan numbers}
+$$C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!} = \prod_{k=2}^{n} \frac{n+k}{k}, \quad n \geq 0$$\\
+
