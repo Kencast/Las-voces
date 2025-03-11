@@ -1,15 +1,13 @@
-/*
- * Author: Simon Lindholm / Katcl
- * Description: Eulerian undirected/directed path/cycle algorithm.
- * Input should be a vector of (dest, global edge index), where
- * for undirected graphs, forward/backward edges have the same index.
- * Returns a list of nodes in the Eulerian path/cycle with src at both start and end, or
- * empty list if no cycle/path exists.
- * To get edge indices back, add .second to s and ret.
+/**
+ * Camino/ciclo de euler
+ * Encuentra un camino/ciclo euler en un grafo dirigido o no
+ * Retorna una lista de nodos que (de forma ordenada) forman el ciclo/camino. Si no, retorna vacio
  * Time: O(V + E)
  */
-#pragma once
+
 typedef pair<int, int> ii;
+typedef vector<lld> vi;
+#define sz(n) (int)(n.size())
 
 // nedges: number of edges
 // ii: {to_node, edge_id from [0, nedges)}
@@ -18,7 +16,7 @@ typedef pair<int, int> ii;
 vector<int> eulerWalk(vector<vector<ii>>& gr, int nedges, int src=0) {
 	int n = sz(gr);
 	vi D(n), its(n), eu(nedges), ret, s = {src};
-	D[src]++; // to allow Euler paths, not just cycles
+	D[src]++; // to allow Euler paths
 	while (!s.empty()) {
 		int x = s.back(), y, e, &it = its[x], end = sz(gr[x]);
 		if (it == end){ ret.push_back(x); s.pop_back(); continue; }

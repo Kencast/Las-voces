@@ -1,17 +1,12 @@
-/*
+/**
+ * Min Cost Max Flow
+ * Maximo flujo con el minimo costo
  * kactl
- * If costs can be negative, call setpi before maxflow, but note that negative cost cycles are not supported.
- * To obtain the actual flow, look at positive values only.
- * Status: Tested on kattis:mincostmaxflow, stress-tested against another implementation
- * Time: $O(F E \log(V))$ where F is max flow. $O(VE)$ for setpi.
+ * Si hay costos negativos, invocar a setpi antes de ejecucion
+ * Para obtener el flujo, ver aristas con flujo positivo
+ * Complejidad: $O(F E \log(V))$ donde F es el flujo maximo. $O(VE)$ para setpi.
 */
-#include <bits/stdc++.h>
-#include <bits/extc++.h> /// include-line, keep-include
 
-using namespace std;
-using lld = long long;
-
-//#pragma once
 #define vec vector
 #define vi vec<lld>
 #define pb push_back
@@ -85,7 +80,7 @@ struct MCMF {
 	}
 
 	// If some costs can be negative, call this before maxflow:
-	void setpi(int s) { // (otherwise, leave this out)
+	void setpi(int s) {
 		fill(all(pi), INF); pi[s] = 0;
 		int it = N, ch = 1; lld v;
 		while (ch-- && it--)

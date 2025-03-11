@@ -1,8 +1,10 @@
-//kactl
-#include <bits/stdc++.h>
-
-using namespace std;
-using lld = long long;
+/**
+ * PushRelabel
+ * Robado de Kactl
+ * Complejidad: O(V^2\sqrt E)
+ * Utiliza heuristicas, por lo cual tiende a ser muy rapido
+ * Para obtener el flujo, solo ver los valores positivos .f de las aristas
+ */
 
 #define vec vector
 #define vi vec<lld>
