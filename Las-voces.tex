@@ -35,25 +35,25 @@
 
 \section{Estructuras}
 	\subsection{Fenwick}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/estructuras/fenwick.cpp}
 	\subsection{Fenwick 2D}
 		\usedby{n}{n}{n}
 		\cppfile{}{src/estructuras/fenwick2d.cpp}
 	\subsection{Segment Tree}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/estructuras/segtree.cpp}
 	\subsection{Segment Tree Lazy}
 		\usedby{n}{n}{n}
 		\cppfile{}{src/estructuras/segtree-lazy.cpp}
 	\subsection{Union Find}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/estructuras/dsu.cpp}
 	\subsection{Ordered Set}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/estructuras/ordered-set.cpp}
 	\subsection{Sparse Table}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/estructuras/sparse-table.cpp}
 	\subsection{Fast Unordered Map}
 		\usedby{n}{n}{n}
@@ -68,7 +68,7 @@
 		\usedby{n}{n}{n}
 		\cppfile{}{src/misc/mod.cpp}
 	\subsection{Mo's}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/misc/mos.cpp}
 
 \section{Flujos y Matchings}
@@ -85,7 +85,7 @@
 		\usedby{n}{n}{n}
 		\cppfile{}{src/flujos_matching/hungarian.cpp}
 	\subsection{Dinitz's}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/flujos_matching/dinitz.cpp}
 	\subsection{Flow with requirements}
 		\usedby{n}{n}{n}
@@ -93,43 +93,43 @@
 
 \section{Grafos}
 	\subsection{Toposort}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/grafos/topo_sort.cpp}
 	\subsection{SCC}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/grafos/scc-tarjan.cpp}
 	\subsection{Dijkstra and BFS 0-1}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/grafos/dijkstra.cpp}
 	\subsection{2Sat}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/grafos/2sat.cpp}
 	\subsection{Bellman Ford}
 		\usedby{n}{n}{n}
 		\cppfile{}{src/grafos/bellman_ford.cpp}
 	\subsection{Floyd Washall}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/grafos/floyd_warshall.cpp}
 	\subsection{Euler Path/Cycle}
 		\usedby{n}{n}{n}
 		\cppfile{}{src/grafos/euler_path_cycle.cpp}
 	\subsection{Puntes y Puntos de Articulación}
 		\usedby{n}{n}{n}
+		\cppfile{}{src/grafos/articulation_points_bridges.cpp }
 	\subsection{Kruskal}
-		\usedby{n}{n}{n}
-	\subsection{Prim}
-		\usedby{n}{n}{n}
-	\subsection{Blossom}
-		\usedby{n}{n}{n}
-	\subsection{Max Clique and Max Independent Set}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
+		\cppfile{}{src/grafos/kruskal.cpp}
+	%\subsection{Blossom}
+		%\usedby{n}{n}{n}
+	%\subsection{Max Clique and Max Independent Set}
+		%\usedby{n}{n}{n}
 
 \section{Árboles}
 	\subsection{Binary Lifting for LCA and Kth Ancestor}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/arboles/lca.cpp}
 	\subsection{Centroid Decomposition}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
 		\cppfile{}{src/arboles/centroid.cpp}
 	\subsection{Heavy Light Decomposition}
 		\usedby{n}{n}{n}
@@ -144,56 +144,60 @@
 \section{Matemática}
 	\subsection{GCD Extendido}
 		\usedby{n}{n}{n}
+		\cppfile{}{src/matematica/gcd_extendido.cpp}
 	\subsection{Euler Totient}
 		\usedby{n}{n}{n}
-	\subsection{Criba de Eratóstenes y de Totient}
+		\cppfile{}{src/matematica/totient.cpp}
+	\subsection{Criba de Totient}
 		\usedby{n}{n}{n}
+		\cppfile{}{src/matematica/criba_variaciones.cpp}
 	\subsection{Miller-Rabin}
 		\usedby{n}{n}{n}
+		\cppfile{}{src/matematica/miller_rabin.cpp}
 	\subsection{Logaritmo Discreto}
 		\usedby{n}{n}{n}
+		\cppfile{}{src/matematica/logaritmo_discreto.cpp}
 	\subsection{Eliminación Gaussiana}
 		\usedby{n}{n}{n}
-	\subsection{Pollar-Rho}
-		\usedby{n}{n}{n}
+		\cppfile{}{src/matematica/gauss_elim.cpp}
 	\subsection{Determinante}
 		\usedby{n}{n}{n}
+		\cppfile{}{src/matematica/determinante.cpp}
 
 \section{Geometría 2D}
+	\subsection{Point Template}
+		\usedby{n}{y}{n}
+		\cppfile{}{src/geometria/Point.h}
 	\subsection{Convex Hull}
 		\usedby{n}{n}{n}
-	\subsection{Point Template}
+		\cppfile{}{src/geometria/convex_hull.cpp}
+	\subsection{Par de puntos más cercanos}
 		\usedby{n}{n}{n}
-	\subsection{Angle Template}
+		\cppfile{}{src/geometria/closest_pair.cpp}
+	\subsection{Geometria distancias, intersecciones, entre otros}
 		\usedby{n}{n}{n}
+		\cppfile{}{src/geometria/geo.cpp}
 % Meter todo lo demás
 % TODO
 
 \section{Transformadas y Convoluciones}
 	\subsection{FFT}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
+		\cppfile{}{src/conv/fft.cpp}
 	\subsection{NTT}
 		\usedby{n}{n}{n}
-	\subsection{Convoluciones OR, AND y XOR}
-		\usedby{n}{n}{n}
-	\subsection{Zeta Subset/Superset}
-		\usedby{n}{n}{n}
-	\subsection{Möbius Subset/Superset}
-		\usedby{n}{n}{n}
-	\subsection{Convolución Subset Sum}
-		\usedby{n}{n}{n}
+		\cppfile{}{src/conv/ntt.cpp}
+	\subsection{FWHT}
+		\usedby{n}{y}{n}
+		\cppfile{}{src/conv/fwht.cpp}
 	\subsection{Convoluciones GCD y LCM}
-		\usedby{n}{n}{n}
+		\usedby{n}{y}{n}
+		\cppfile{}{src/conv/gcdlcm.cpp}
 
 \section{Optimización}
-	\subsection{Simplex}
-		\usedby{n}{n}{n}
 	\subsection{Simulated Annealing}
 		\usedby{n}{n}{n}
-	\subsection{Hill Climbing}
-		\usedby{n}{n}{n}
-	\subsection{Regresiones lineales}
-		\usedby{n}{n}{n}
+		\cppfile{}{src/heuristica/simulated_annealing.cpp}
 
 %\section{Estructuras}
 %\subsection{TEST}

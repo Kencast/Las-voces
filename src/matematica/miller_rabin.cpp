@@ -2,6 +2,8 @@
 // Prueba si n es primo, n <= 3 * 10^18
 // O(log(n)), considerando multiplicaciones y exponenciaciones constantes
 
+typedef long long ll;
+
 ll mul(ll a, ll b, ll m) {
 	ll ret = a*b - ll((long double)1/m*a*b+0.5)*m;
 	return ret < 0 ? ret+m : ret;

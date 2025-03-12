@@ -1,15 +1,9 @@
 /**
- * Author: Simon Lindholm
- * Date: 2016-09-06
- * License: CC0
- * Source: folklore
- * Description: Calculates determinant of a matrix. Destroys the matrix.
- * Time: $O(N^3)$
- * Status: somewhat tested
+ * Robado de kactl
+ * Calcula la determinante
+ * Complejidad: $O(N^3)$
  */
-
-
-#pragma once
+ 
 #define rep(i, a, b) for(int i = a; i < (b); ++i)
 
 double det(vector<vector<double>>& a) {

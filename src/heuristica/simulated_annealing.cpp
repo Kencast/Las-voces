@@ -1,14 +1,9 @@
-// de la pandilla
-using my_clock = chrono::steady_clock;
+/**
+ * Simulated annealing
+ * Robado de la pandilla
+ */
 
-struct Random {
-	mt19937_64 engine;
-	Random(): engine(my_clock::now().time_since_epoch().count()) {}
-	template<class Int>Int integer(Int n) {return integer<Int>(0, n);} // `[0,n)`
-	template<class Int>Int integer(Int l, Int r)
-		{return uniform_int_distribution{l, r-1}(engine);} // `[l,r)`
-	double real() {return uniform_real_distribution{}(engine);} // `[0,1)`
-} rng;
+#include "rng.cpp"
 
 struct Timer {
 	using time = my_clock::time_point;
@@ -22,8 +17,8 @@ struct Timer {
 template<class See,class Upd>struct Annealing {
 	using energy = invoke_result_t<See>;
 	energy curr, low;
-	See see;
-	Upd upd;
+	See see; // lambda
+	Upd upd; // lambda
 	Annealing(See _see, Upd _upd): see{_see}, upd{_upd}
 		{curr = low = see(), upd();}
 	void simulate(double s, double mult=1) { // Simula por `s` segundos.

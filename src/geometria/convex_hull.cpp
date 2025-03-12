@@ -1,15 +1,14 @@
 /**
-Kactl
-Returns a vector of the points of the convex hull in counter-clockwise order.
-Points on the edge of the hull between two other points are not considered part of the hull.
-Time: O(n \log n)
-#pragma once
-*/
-#include <bits/stdc++.h>
+ * Convex Hull
+ * Kactl
+ * Retorna un vector de los puntos sobre el convex hull in orden contra reloj
+ * Puntos colineales no se incluyen (o sea, si tenemos puntos asi sobre el hull, solo se toman las esquinas)
+ * Complejidad: O(n \log n)
+ */
+
 #include "Point.h"
 #define sz(x) (int)(x).size()
-#define all(n) begin(n), end(n)
-using lld = long long; using namespace std;
+
 typedef Point<lld> P;
 vector<P> convexHull(vector<P> pts) {
 	if (sz(pts) <= 1) return pts;

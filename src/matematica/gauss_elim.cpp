@@ -6,9 +6,6 @@
 // {0, {}} si no existe, {INF, ans} si hay infinitas, {x, ans}
 // O(n^2 * m)
 
-#include <bits/stdc++.h>
-using namespace std;
-
 
 template<typename T>
 pair<int, vector<T>> gauss(vector<vector<T>> a, vector<T> b) {
@@ -17,7 +14,7 @@ pair<int, vector<T>> gauss(vector<vector<T>> a, vector<T> b) {
 	for (int i = 0; i < n; i++) a[i].push_back(b[i]);
 
 	vector<int> where(m, -1);
-	for (int col = 0, row = 0; col < m and row < n; col++) {
+	for (int col = 0, row = 0; col < m && row < n; col++) {
 		int sel = row;
 		for (int i=row; i<n; ++i)
 			if (abs(a[i][col]) > abs(a[sel][col])) sel = i;

@@ -1,12 +1,12 @@
-// Articulation Points
-//
-// Encuentra los puntos de articulación (vertices críticos) de un grafo
-//
-// art[i] almacena el numero de nuevas componentes creadas al eliminar vertice i
-// si art[i] >= 1, entonces vertice i es punto de articulación
-// O(n+m)
+/**
+ * Articulation Points
+ * Encuentra los puntos de articulacion (vertices criticos) de un grafo
+ * art[i] almacena el numero de nuevas componentes creadas al eliminar vertice i
+ * si art[i] >= 1, entonces vertice i es punto de articulacion
+ * O(n+m)
+ */
 
-namespace articulation{
+namespace articulation {
     int n;
     vector<vector<int>> g;
     stack<int> s;
@@ -29,7 +29,7 @@ namespace articulation{
             }
             else lo = min(lo, id[j]);
         }
-        if (p == -1 and art[i]) art[i]--;
+        if (p == -1 && art[i]) art[i]--;
         return lo;
     }
 

@@ -4,8 +4,10 @@
 // Si no hay, retorna -1
 // O(sqrt(m) * log(sqrt(m))
 
+typedef long long ll;
+
 int dlog(int b, int a, int m) {
-	if (a == 0) return b ? -1 : 1; // caso nao definido
+	if (a == 0) return b ? -1 : 1;
 
 	a %= m, b %= m;
 	int k = 1, shift = 0;
@@ -32,7 +34,7 @@ int dlog(int b, int a, int m) {
 	for (int j = 1, cur = k; j <= sq; j++) {
 		cur = (ll) cur * giant % m;
 		auto it = lower_bound(baby.begin(), baby.end(), pair(cur, INF));
-		if (it != baby.begin() and (--it)->first == cur)
+		if (it != baby.begin() && (--it)->first == cur)
 			return sq * j - it->second + shift;
 	}
 

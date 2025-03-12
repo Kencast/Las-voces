@@ -1,39 +1,31 @@
-// Source el Vasito
-// O(MlogN)
+/**
+ * Kruskal
+ * Robado de si mismo
+ * O(MlogN)
+ */
 
+#include "dsu.cpp"
 
-namespace krus{
-    #define snd second
-    #define fst first
-    #define fore(i,a,b) for(int i=a,ThxDem=b;i<ThxDem;++i)
-    typedef long long ll;
+pair<lld, vector<pair<int, int>>> kruskal(int n, int m, vector<pair<int, int>> &e, vector<lld> &w) {
+	DSU dsu(n);
 
-    int uf[MAXN];
+	vector<pair<int, int>> r;
+	vector<int> ei(m);
 
+	iota(all(ei), 0);
+	sort(all(ei), [w](int i, int j) {
+			return w[i] < w[j];
+			});
 
-    void uf_init(){
-        memset(uf,-1,sizeof(uf));
-    }
-    int uf_find(int x){
-        return uf[x]<0?x:uf[x]=uf_find(uf[x]);
-    }
-    bool uf_join(int x, int y){
-        x=uf_find(x);y=uf_find(y);
-        if(x==y)return false;
-        if(uf[x]>uf[y])swap(x,y);
-        uf[x]+=uf[y];uf[y]=x;
-        return true;
-    }
-    vector<pair<ll,pair<int,int> >> es; // edges (cost,(u,v))
+	lld ans = 0;
+	for (int i = 0; i < m; ++i) {
+		auto [x, y] = e[ei[i]];
+		lld c = w[ei[i]];
+		if (dsu.join(x, y)) {
+			r.emplace_back(x, y);
+			ans += c;
+		}
+	}
 
-    ll kruskal(){  // assumes graph is connected
-        sort(es.begin(),es.end());uf_init();
-        ll r=0;
-        fore(i,0,es.size()){
-            int x=es[i].snd.fst,y=es[i].snd.snd;
-            if(uf_join(x,y))r+=es[i].fst; // (x,y,c) belongs to mst
-        }
-        return r; // total cost
-    }
-
-};
+	return {ans, r};
+}
